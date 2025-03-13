@@ -1,0 +1,46 @@
+@media (max-width: 600px) {
+    .time {
+        flex-direction: column;
+    }
+
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    padding: 24px;
+    background-color: rgb(242, 242, 242);
+
+    .categoriaName {
+        width: 200px;
+        padding: 24px;
+        border-radius: 10px;
+    }
+}
+
+
+.time h3 {
+    font-size: 32px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.time .colaboradores {
+    display: flex;
+    justify-content: left;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.time .input-cor {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}

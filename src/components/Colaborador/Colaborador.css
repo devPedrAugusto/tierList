@@ -1,0 +1,52 @@
+.colaborador {
+    box-sizing: border-box;
+    position: relative;
+    height: 300px;
+    width: 280px;
+}
+
+.colaborador .cabecalho {
+    height: 200px;
+    width: 100%;
+    background-color: #F0F0F0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.colaborador img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.colaborador .colaborador-rodape {
+    padding: 8px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.colaborador .colaborador-rodape>h4 {
+    margin: 0;
+    color: #212121;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.colaborador .colaborador-rodape h5 {
+    font-size: 18px;
+    color: #212121;
+}
+
+.colaborador .colaborador-rodape div {
+    cursor: pointer;
+}
+
+.deletar {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

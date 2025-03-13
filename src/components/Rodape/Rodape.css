@@ -1,0 +1,22 @@
+.rodape {
+    background-color: #181818;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('/imagens/fundo.png');
+    background-position: right bottom;
+    flex-wrap: wrap;
+}
+
+.rodape div {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape h5 {
+    color: #ffff;
+    font-weight: 500;
+    font-size: 20px;
+}

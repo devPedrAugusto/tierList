@@ -1,0 +1,11 @@
+.banner {
+    padding: 64px;
+    background-color: #181818;
+    text-align: center;
+    background-image: url('/imagens/fundo.png');
+}
+
+h1 {
+    color: white;
+    max-height: 100%;
+}
