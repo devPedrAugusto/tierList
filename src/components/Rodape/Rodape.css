@@ -1,18 +1,13 @@
 .rodape {
-    background-color: #181818;
     display: flex;
-
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #181818;
     background-image: url('/imagens/fundo.png');
     background-position: right bottom;
-    flex-wrap: wrap;
-}
-
-.rodape div {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
 }
 
 .rodape h5 {

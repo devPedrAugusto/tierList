@@ -4,6 +4,7 @@ import Botao from '../Botao'
 import Campo from '../Campo'
 import { v4 as uuidv4 } from 'uuid';
 import { TierListContext } from '../../context/TierListContext'
+import Swal from 'sweetalert2';
 
 
 const Formulario = () => {
@@ -39,6 +40,20 @@ const Formulario = () => {
         setImagem('')
     }
 
+    function setCampo(valor, set, caracteres) {
+
+        if (valor !== ' ')
+            if (valor.length <= caracteres)
+                set(valor)
+            else
+                Swal.fire({
+                    icon: "warning",
+                    title: "Você chegou no limite",
+                    text: `O máximo de caracateres para esse campo são ${caracteres}`
+                })
+
+    }
+
     return (
         <>
             <section className="formulario">
@@ -54,10 +69,9 @@ const Formulario = () => {
                         label="Nome"
                         placeholder="Digite o nome da categoria"
                         valor={nomeTime}
-                        aoAlterado={valor => setNomeTime(valor)}
+                        aoAlterado={valor => setCampo(valor, setNomeTime, 50)}
                     />
                     <Campo
-                        //obrigatorio
                         type='color'
                         label="Cor"
                         placeholder="Digite a cor do time"
@@ -73,17 +87,19 @@ const Formulario = () => {
                     <form onSubmit={aoSalvar}>
                         <h2>Preencha os dados para criar o card do colaborador</h2>
                         <Campo
-                            obrigatorio={true}
+                            obrigatorio
                             label="Nome"
                             placeholder="Digite seu nome"
                             valor={nome}
-                            aoAlterado={valor => setNome(valor)}
+                            aoAlterado={valor => setCampo(valor, setNome, 50)}
                         />
                         <Campo
+                            obrigatorio
+                            image
+                            type="file"
                             label="Imagem"
                             placeholder="Digite o endereço da imagem"
-                            valor={imagem}
-                            aoAlterado={valor => setImagem(valor)}
+                            aoAlterado={valor => setImagem(URL.createObjectURL(valor))}
                         />
                         <Botao>
                             Criar Card

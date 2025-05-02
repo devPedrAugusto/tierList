@@ -1,13 +1,7 @@
-@media (max-width: 600px) {
-    .time {
-        flex-direction: column;
-    }
-
-}
-
 .time {
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     align-items: center;
     text-align: center;
@@ -16,7 +10,6 @@
     background-color: rgb(242, 242, 242);
 
     .categoriaName {
-        width: 200px;
         padding: 24px;
         border-radius: 10px;
     }
@@ -24,6 +17,8 @@
 
 
 .time h3 {
+    max-width: 80vw;
+    overflow-wrap: break-word;
     font-size: 32px;
     border-bottom: 4px solid;
     display: inline-block;
@@ -32,7 +27,7 @@
 
 .time .colaboradores {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 16px;
     margin-top: 32px;
     flex-wrap: wrap;

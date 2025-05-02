@@ -6,6 +6,8 @@ import Rodape from '../src/components/Rodape'
 import { TierListContext } from './context/TierListContext';
 import SemTier from './components/SemTier';
 import { DragDropContext } from '@hello-pangea/dnd';
+import './app.css'
+
 
 function App() {
 

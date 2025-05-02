@@ -8,6 +8,7 @@
 .colaborador .cabecalho {
     height: 200px;
     width: 100%;
+    background-image: url('../../../public/imagens/defaultImg.png');
     background-color: #F0F0F0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,6 +23,7 @@
 }
 
 .colaborador .colaborador-rodape {
+    overflow-wrap: break-word;
     padding: 8px;
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);

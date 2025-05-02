@@ -1,23 +1,27 @@
 import './Campo.css'
 
-const Campo = (props) => {
+const Campo = ({ placeholder, type, label, valor, aoAlterado, image, obrigatorio }) => {
 
-    const placeholderModificada = `${props.placeholder}...`
+    const placeholderModificada = `${placeholder}...`
 
     const aoDigitado = (evento) => {
-        props.aoAlterado(evento.target.value)
+        if (image != undefined)
+            aoAlterado(evento.target.files[0])
+        else
+            aoAlterado(evento.target.value)
     }
 
     return (
-        <div className={`campo campo-${props.type}`}>
+        <div className={`campo campo-${type}`}>
             <label>
-                {props.label}
+                {label}
             </label>
             <input
-                type={props.type}
-                value={props.valor}
+                type={type}
+                value={valor}
                 onChange={aoDigitado}
-                required={props.obrigatorio}
+                accept={image ? "image/*" : ""}
+                required={obrigatorio}
                 placeholder={placeholderModificada} />
         </div>
     )
